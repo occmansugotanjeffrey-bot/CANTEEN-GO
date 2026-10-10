@@ -331,3 +331,23 @@ Route::get('/foods', function () {
     ],
 ]);
 });
+
+Route::get('/announcements', function () {
+    return response()->json([
+        [
+            "id" => 1,
+            "title" => "Canteen Maintenance",
+            "message" => "The canteen will be closed for maintenance on June 15th. We apologize for any inconvenience."
+        ],
+        [
+            "id" => 2,
+            "title" => "New Stall Opening",
+            "message" => "Exciting news! A new stall, 'Sarap Station,' will be opening next week. Get ready for delicious meals!"
+        ],
+        [
+            "id" => 3,
+            "title" => "Special Promotion",
+            "message" => "Enjoy a special promotion this week! Buy one meal and get a free drink at 'Tasty Bites.'"
+        ]
+    ]);
+});
